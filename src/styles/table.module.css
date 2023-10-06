@@ -1,0 +1,53 @@
+.list_table {
+  vertical-align: middle !important;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.nodata {
+  width: 100%;
+  text-align: center;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+.srh_field {
+  background: #ffffff;
+  color: #212121;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid #bcbcbc;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+  max-width: 500px;
+  margin: 10px 20px;
+  position: relative;
+  padding-left: 10px;
+}
+.list_table th {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #606b80;
+  padding: 18px 1em 18px 3.7rem;
+  border-color: #f3f3f3;
+  border-top: 1px solid #f3f3f3;
+  top: 0px;
+  position: sticky;
+  background-color: #ffffff;
+  z-index: 3;
+}
+
+.list_table td {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #0b1425;
+  padding: 0.5rem 1em 0.5em 3.7rem;
+  border-color: #f3f3f3;
+}
