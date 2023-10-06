@@ -89,13 +89,29 @@ function App() {
           ) : null}
         </tbody>
       </table>
-      <button onClick={() => setPage(page - 1)} disabled={page === 1}>
-        Previous
-      </button>
-      <p>{page}</p>
-      <button onClick={() => setPage(page + 1)} disabled={page === totalPage}>
-        Next
-      </button>
+      <div className={style.pagination}>
+        <button
+          onClick={() => {
+            setPage(page - 1);
+            setSearchposts(posts);
+          }}
+          disabled={page === 1}
+          className={style.pagination_button}
+        >
+          Previous
+        </button>
+        <p className={style.pagination_text}>{page}</p>
+        <button
+          onClick={() => {
+            setPage(page + 1);
+            setSearchposts(posts);
+          }}
+          disabled={page === totalPage}
+          className={style.pagination_button}
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 }

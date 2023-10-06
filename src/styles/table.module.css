@@ -2,6 +2,7 @@
   vertical-align: middle !important;
   border-collapse: separate;
   border-spacing: 0;
+  border: 1px solid #bcbcbc;
 }
 .nodata {
   width: 100%;
@@ -50,4 +51,37 @@
   color: #0b1425;
   padding: 0.5rem 1em 0.5em 3.7rem;
   border-color: #f3f3f3;
+}
+
+.list_table td {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #0b1425;
+  padding: 0.5rem 1em 0.5em 3.7rem;
+  border-color: #f3f3f3;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+}
+.pagination_text {
+  font-size: 20px;
+  margin-top: 30px;
+}
+.pagination_button {
+  border-radius: 6px;
+  height: 42px;
+  border: 0;
+  outline: none;
+  padding: 10px 31px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #f3f3f3;
+  text-align: center;
+  cursor: pointer;
+  background-color: #0b1425;
+  margin: 20px 20px;
 }
