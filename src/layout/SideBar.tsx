@@ -129,7 +129,7 @@ export default function SideBar() {
             disablePadding
             sx={{ display: "block" }}
             style={
-              location.pathname === "/create-post"
+              location.pathname === "/create-fpo-details"
                 ? {
                     backgroundColor: "#9747FF",
                     color: "#fff",
@@ -141,7 +141,7 @@ export default function SideBar() {
           >
             <ListItemButton
               onClick={() => {
-                navigate("/create-post");
+                navigate("/create-fpo-details");
               }}
               sx={{
                 minHeight: 48,

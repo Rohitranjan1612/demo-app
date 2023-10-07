@@ -1,5 +1,5 @@
 import * as React from "react";
-import CreatePost from "../pages/CreatePost";
+import CreateFpoDetails from "../pages/CreateFpoDetails";
 import AllPosts from "../pages/AllPosts";
 import { Routes, Route } from "react-router-dom";
 
@@ -8,7 +8,7 @@ export default function SideBar() {
     <React.StrictMode>
       <Routes>
         <Route path="/" element={<AllPosts />} />
-        <Route path="/create-post" element={<CreatePost />} />
+        <Route path="/create-fpo-details" element={<CreateFpoDetails />} />
       </Routes>
     </React.StrictMode>
   );
