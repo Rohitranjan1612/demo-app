@@ -70,7 +70,7 @@ function App() {
           ) : !loading ? (
             <tr>
               <td colSpan={8}>
-                <p className={style.nodata}>No influencer found!</p>
+                <p className={style.nodata}>No post found!</p>
               </td>
             </tr>
           ) : null}
