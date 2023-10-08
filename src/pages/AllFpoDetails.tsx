@@ -18,7 +18,10 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 function Row(props: { row: any }) {
   const { row } = props;
   const [open, setOpen] = React.useState(false);
-
+  const replaceImage = (error: any) => {
+    error.target.src =
+      "https://climate.onep.go.th/wp-content/uploads/2020/01/default-image-100x100.jpg";
+  };
   return (
     <React.Fragment>
       <TableRow sx={{ "& > *": { borderBottom: "unset" } }}>
@@ -32,17 +35,22 @@ function Row(props: { row: any }) {
           </IconButton>
         </TableCell>
         <TableCell component="th" scope="row">
-          {row.fpoDetailsId}
+          {row.fpoDetailsId || "--"}
         </TableCell>
-        <TableCell>{row.fpoName}</TableCell>
-        <TableCell>{row.fpoRole}</TableCell>
-        <TableCell>{row.nameOfResourceInstitute}</TableCell>
+        <TableCell>{row.fpoName || "--"}</TableCell>
+        <TableCell>{row.fpoRole || "--"}</TableCell>
+        <TableCell>{row.nameOfResourceInstitute || "--"}</TableCell>
         <TableCell>
           <img
             id="registerOfficeImage"
             width={"100"}
             style={{ marginTop: "10px" }}
-            src={row.registerOfficeImage}
+            src={
+              row.registerOfficeImage ||
+              "https://climate.onep.go.th/wp-content/uploads/2020/01/default-image-100x100.jpg"
+            }
+            alt="--"
+            onError={replaceImage}
           />
         </TableCell>
       </TableRow>
@@ -77,7 +85,12 @@ function Row(props: { row: any }) {
                         id="registerOfficeImage"
                         width={"100"}
                         style={{ marginTop: "10px" }}
-                        src={row.fpoStaffDetails.fpoStaffImage}
+                        src={
+                          row.fpoStaffDetails.fpoStaffImage ||
+                          "https://climate.onep.go.th/wp-content/uploads/2020/01/default-image-100x100.jpg"
+                        }
+                        alt="--"
+                        onError={replaceImage}
                       />
                     </TableCell>
                     <TableCell component="th" scope="row">
@@ -85,7 +98,12 @@ function Row(props: { row: any }) {
                         id="registerOfficeImage"
                         width={"100"}
                         style={{ marginTop: "10px" }}
-                        src={row.fpoStaffDetails.bankImage}
+                        src={
+                          row.fpoStaffDetails.bankImage ||
+                          "https://climate.onep.go.th/wp-content/uploads/2020/01/default-image-100x100.jpg"
+                        }
+                        alt="--"
+                        onError={replaceImage}
                       />
                     </TableCell>
                     <TableCell>
