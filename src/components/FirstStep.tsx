@@ -22,6 +22,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setfpoName(e.target.value)}
+          value={props.fpoName}
         />
       </FormControl>
       <FormControl
@@ -36,6 +37,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setnameOfResourceInstitute(e.target.value)}
+          value={props.nameOfResourceInstitute}
         />
       </FormControl>
       <FormControl
@@ -48,6 +50,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setspocName(e.target.value)}
+          value={props.spocName}
         />
       </FormControl>
       <FormControl
@@ -60,6 +63,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setpocDesignation(e.target.value)}
+          value={props.pocDesignation}
         />
       </FormControl>
       <FormControl
@@ -72,6 +76,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setspocMobileNumber(e.target.value)}
+          value={props.spocMobileNumber}
         />
       </FormControl>
       <FormControl
@@ -84,6 +89,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setspocEmail(e.target.value)}
+          value={props.spocEmail}
         />
       </FormControl>
       <FormControl
@@ -96,6 +102,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setspocWebsite(e.target.value)}
+          value={props.spocWebsite}
         />
       </FormControl>
       <FormControl
@@ -108,6 +115,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setregisterOffice(e.target.value)}
+          value={props.registerOffice}
         />
       </FormControl>
       <FormControl
@@ -122,6 +130,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setadministrativeOffice(e.target.value)}
+          value={props.administrativeOffice}
         />
       </FormControl>
       <FormControl
@@ -134,6 +143,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setrentOrLeased(e.target.value)}
+          value={props.rentOrLeased}
         />
       </FormControl>
       <FormControl
@@ -146,6 +156,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setincorporationPeriod(e.target.value)}
+          value={props.incorporationPeriod}
         />
       </FormControl>
       <FormControl
@@ -158,6 +169,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setbalanceSheet(e.target.value)}
+          value={props.balanceSheet}
         />
       </FormControl>
       <FormControl
@@ -172,6 +184,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setsubscribedShareCapital(e.target.value)}
+          value={props.subscribedShareCapital}
         />
       </FormControl>
       <FormControl
@@ -184,6 +197,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setpanAvailable(e.target.value)}
+          value={props.panAvailable}
         />
       </FormControl>
       <FormControl
@@ -196,6 +210,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setgstAvailable(e.target.value)}
+          value={props.gstAvailable}
         />
       </FormControl>
       <FormControl
@@ -208,6 +223,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setceo(e.target.value)}
+          value={props.ceo}
         />
       </FormControl>
       <FormControl
@@ -222,6 +238,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.settotalNumberOfSmlFarmer(e.target.value)}
+          value={props.totalNumberOfSmlFarmer}
         />
       </FormControl>
       <FormControl
@@ -236,6 +253,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.settotalLandHoldingOfSmlFarmer(e.target.value)}
+          value={props.totalLandHoldingOfSmlFarmer}
         />
       </FormControl>
       <FormControl
@@ -250,6 +268,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.settotalNumberOfMedFarmer(e.target.value)}
+          value={props.totalNumberOfMedFarmer}
         />
       </FormControl>
       <FormControl
@@ -264,6 +283,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.settotalLandHoldingOfMedFarmer(e.target.value)}
+          value={props.totalLandHoldingOfMedFarmer}
         />
       </FormControl>
       <FormControl
@@ -278,6 +298,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.settotalNumberOfBigFarmer(e.target.value)}
+          value={props.totalNumberOfBigFarmer}
         />
       </FormControl>
       <FormControl
@@ -292,6 +313,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.settotalLandHoldingOfBigFarmer(e.target.value)}
+          value={props.totalLandHoldingOfBigFarmer}
         />
       </FormControl>{" "}
       <FormControl
@@ -306,6 +328,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setnumberOfWomanShareHolders(e.target.value)}
+          value={props.numberOfWomanShareHolders}
         />
       </FormControl>
       <FormControl
@@ -320,6 +343,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setnumberOfStShareHolders(e.target.value)}
+          value={props.numberOfStShareHolders}
         />
       </FormControl>
       <FormControl
@@ -334,6 +358,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setnumberOfScShareHolders(e.target.value)}
+          value={props.numberOfScShareHolders}
         />
       </FormControl>
       <FormControl
@@ -348,6 +373,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setincreaseInLastSixMonths(e.target.value)}
+          value={props.increaseInLastSixMonths}
         />
       </FormControl>
       <FormControl
@@ -362,6 +388,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setnumberOfActiveMembers(e.target.value)}
+          value={props.numberOfActiveMembers}
         />
       </FormControl>
       <FormControl
@@ -378,6 +405,7 @@ function FirstStep(props: any) {
           onChange={(e) =>
             props.setnonMembersAvailingServiceFpc(e.target.value)
           }
+          value={props.nonMembersAvailingServiceFpc}
         />
       </FormControl>
       <FormControl
@@ -390,6 +418,7 @@ function FirstStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setfpoRole(e.target.value)}
+          value={props.fpoRole}
         />
       </FormControl>
     </div>

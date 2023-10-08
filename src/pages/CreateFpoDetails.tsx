@@ -273,6 +273,35 @@ function CreateFpoDetails() {
                 setincreaseInLastSixMonths={setincreaseInLastSixMonths}
                 setnumberOfActiveMembers={setnumberOfActiveMembers}
                 setfpoRole={setfpoRole}
+                fpoName={fpoName}
+                nameOfResourceInstitute={nameOfResourceInstitute}
+                spocName={spocName}
+                pocDesignation={pocDesignation}
+                spocMobileNumber={spocMobileNumber}
+                spocEmail={spocEmail}
+                spocWebsite={spocWebsite}
+                registerOffice={registerOffice}
+                administrativeOffice={administrativeOffice}
+                rentOrLeased={rentOrLeased}
+                incorporationPeriod={incorporationPeriod}
+                balanceSheet={balanceSheet}
+                subscribedShareCapital={subscribedShareCapital}
+                panAvailable={panAvailable}
+                gstAvailable={gstAvailable}
+                ceo={ceo}
+                totalNumberOfSmlFarmer={totalNumberOfSmlFarmer}
+                totalLandHoldingOfSmlFarmer={totalLandHoldingOfSmlFarmer}
+                totalNumberOfMedFarmer={totalNumberOfMedFarmer}
+                totalLandHoldingOfMedFarmer={totalLandHoldingOfMedFarmer}
+                totalNumberOfBigFarmer={totalNumberOfBigFarmer}
+                totalLandHoldingOfBigFarmer={totalLandHoldingOfBigFarmer}
+                numberOfWomanShareHolders={numberOfWomanShareHolders}
+                numberOfStShareHolders={numberOfStShareHolders}
+                numberOfScShareHolders={numberOfScShareHolders}
+                increaseInLastSixMonths={increaseInLastSixMonths}
+                numberOfActiveMembers={numberOfActiveMembers}
+                nonMembersAvailingServiceFpc={nonMembersAvailingServiceFpc}
+                fpoRole={fpoRole}
               />
             ) : indexStep === 1 ? (
               <SecondStep
@@ -286,6 +315,16 @@ function CreateFpoDetails() {
                 setfssaiValidityDate={setfssaiValidityDate}
                 setgstValidityDate={setgstValidityDate}
                 setpollutionValidityDate={setpollutionValidityDate}
+                ertilizerValidityDate={ertilizerValidityDate}
+                pesticideInsecticideValidityDate={
+                  pesticideInsecticideValidityDate
+                }
+                seedsValidityDate={seedsValidityDate}
+                mportExportValidityDate={mportExportValidityDate}
+                directMarketingValidityDate={directMarketingValidityDate}
+                fssaiValidityDate={fssaiValidityDate}
+                gstValidityDate={gstValidityDate}
+                pollutionValidityDate={pollutionValidityDate}
               />
             ) : indexStep === 2 ? (
               <ThirdStep
@@ -309,6 +348,24 @@ function CreateFpoDetails() {
                 setaccountType={setaccountType}
                 setaccountNumber={setaccountNumber}
                 setifscCode={setifscCode}
+                name={name}
+                dateOfBirth={dateOfBirth}
+                qualification={qualification}
+                pan={pan}
+                address={address}
+                occupation={occupation}
+                experience={experience}
+                landLine={landLine}
+                mobileNumber={mobileNumber}
+                associatedWithOthInstitutions={associatedWithOthInstitutions}
+                authorizedSignature={authorizedSignature}
+                dateOfAppointment={dateOfAppointment}
+                salary={salary}
+                bankName={bankName}
+                bankAddress={bankAddress}
+                accountType={accountType}
+                accountNumber={accountNumber}
+                ifscCode={ifscCode}
               />
             ) : (
               <ForthStep
@@ -329,6 +386,19 @@ function CreateFpoDetails() {
                 accountDetails={accountDetails}
                 registeredAddress={registeredAddress}
                 staffPhoto={staffPhoto}
+                fpoDetailsId={fpoDetailsId}
+                gstValidity={gstValidity}
+                pollutionValidity={pollutionValidity}
+                fssaiValidity={fssaiValidity}
+                directMarketingValidity={directMarketingValidity}
+                importExportValidity={importExportValidity}
+                seedsValidity={seedsValidity}
+                pesticideInsecticideValidity={pesticideInsecticideValidity}
+                fertilizerLicenseValidity={fertilizerLicenseValidity}
+                gstAvailable={gstAvailable}
+                panAvailable={panAvailable}
+                incorporationPeriod={incorporationPeriod}
+                rentOrLeased={rentOrLeased}
               />
             )}
             <div style={{ marginLeft: "80px" }}>

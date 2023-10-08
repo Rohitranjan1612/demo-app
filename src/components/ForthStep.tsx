@@ -38,6 +38,7 @@ function ForthStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setfpoDetailsId(e.target.value)}
+          value={props.fpoDetailsId}
         />
       </FormControl>
       <FormControl
@@ -50,6 +51,7 @@ function ForthStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setgstValidity(e.target.value)}
+          value={props.gstValidity}
         />
       </FormControl>
       <FormControl
@@ -62,6 +64,7 @@ function ForthStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setpollutionValidity(e.target.value)}
+          value={props.pollutionValidity}
         />
       </FormControl>
       <FormControl
@@ -74,6 +77,7 @@ function ForthStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setfssaiValidity(e.target.value)}
+          value={props.fssaiValidity}
         />
       </FormControl>
       <FormControl
@@ -88,6 +92,7 @@ function ForthStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setdirectMarketingValidity(e.target.value)}
+          value={props.directMarketingValidity}
         />
       </FormControl>
       <FormControl
@@ -102,6 +107,7 @@ function ForthStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setimportExportValidity(e.target.value)}
+          value={props.importExportValidity}
         />
       </FormControl>
       <FormControl
@@ -114,6 +120,7 @@ function ForthStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setseedsValidity(e.target.value)}
+          value={props.seedsValidity}
         />
       </FormControl>
       <FormControl
@@ -130,6 +137,7 @@ function ForthStep(props: any) {
           onChange={(e) =>
             props.setpesticideInsecticideValidity(e.target.value)
           }
+          value={props.pesticideInsecticideValidity}
         />
       </FormControl>
       <FormControl
@@ -144,6 +152,7 @@ function ForthStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setfertilizerLicenseValidity(e.target.value)}
+          value={props.fertilizerLicenseValidity}
         />
       </FormControl>
       <h5>Staff Photo</h5>

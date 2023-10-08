@@ -29,6 +29,7 @@ function ThirdStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setname(e.target.value)}
+          value={props.name}
         />
       </FormControl>
       <div
@@ -44,7 +45,8 @@ function ThirdStep(props: any) {
               props.setdateOfBirth(moment(e.$d).format("YYYY-MM-DD"));
             }}
             format="YYYY-MM-DD"
-            slotProps={{ textField: { fullWidth: true } }}
+            slotProps={{ textField: { fullWidth: true, error: false } }}
+            value={props.dateOfBirth && moment(props.dateOfBirth)}
           />
         </LocalizationProvider>
       </div>
@@ -58,6 +60,7 @@ function ThirdStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setqualification(e.target.value)}
+          value={props.qualification}
         />
       </FormControl>
       <FormControl
@@ -70,6 +73,7 @@ function ThirdStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setpan(e.target.value)}
+          value={props.pan}
         />
       </FormControl>
       <FormControl
@@ -82,6 +86,7 @@ function ThirdStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setaddress(e.target.value)}
+          value={props.address}
         />
       </FormControl>
       <FormControl
@@ -94,6 +99,7 @@ function ThirdStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setoccupation(e.target.value)}
+          value={props.occupation}
         />
       </FormControl>
       <FormControl
@@ -106,6 +112,7 @@ function ThirdStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setexperience(e.target.value)}
+          value={props.experience}
         />
       </FormControl>
       <FormControl
@@ -118,6 +125,7 @@ function ThirdStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setlandLine(e.target.value)}
+          value={props.landLine}
         />
       </FormControl>
       <FormControl
@@ -130,6 +138,7 @@ function ThirdStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setmobileNumber(e.target.value)}
+          value={props.mobileNumber}
         />
       </FormControl>
       <FormControl
@@ -158,6 +167,7 @@ function ThirdStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setauthorizedSignature(e.target.value)}
+          value={props.authorizedSignature}
         />
       </FormControl>
       <div
@@ -173,7 +183,8 @@ function ThirdStep(props: any) {
               props.setdateOfAppointment(moment(e.$d).format("YYYY-MM-DD"));
             }}
             format="YYYY-MM-DD"
-            slotProps={{ textField: { fullWidth: true } }}
+            slotProps={{ textField: { fullWidth: true, error: false } }}
+            value={props.dateOfAppointment && moment(props.dateOfAppointment)}
           />
         </LocalizationProvider>
       </div>
@@ -187,6 +198,7 @@ function ThirdStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setsalary(e.target.value)}
+          value={props.salary}
         />
       </FormControl>
       <FormControl
@@ -199,6 +211,7 @@ function ThirdStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setbankName(e.target.value)}
+          value={props.bankName}
         />
       </FormControl>
       <FormControl
@@ -211,6 +224,7 @@ function ThirdStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setbankAddress(e.target.value)}
+          value={props.bankAddress}
         />
       </FormControl>
       <FormControl
@@ -223,6 +237,7 @@ function ThirdStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setaccountType(e.target.value)}
+          value={props.accountType}
         />
       </FormControl>
       <FormControl
@@ -235,6 +250,7 @@ function ThirdStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setaccountNumber(e.target.value)}
+          value={props.accountNumber}
         />
       </FormControl>
       <FormControl
@@ -247,6 +263,7 @@ function ThirdStep(props: any) {
         <Input
           id="component-simple"
           onChange={(e) => props.setifscCode(e.target.value)}
+          value={props.ifscCode}
         />
       </FormControl>
     </div>
