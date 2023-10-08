@@ -25,10 +25,10 @@ function ThirdStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">name</InputLabel>
+        <InputLabel htmlFor="component-simple">Name</InputLabel>
         <Input
           id="component-simple"
-          onChange={(e) => props.name(e.target.value)}
+          onChange={(e) => props.setname(e.target.value)}
         />
       </FormControl>
       <div
@@ -39,11 +39,12 @@ function ThirdStep(props: any) {
       >
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DatePicker
-            label="date Of Birth"
+            label="Date Of Birth"
             onChange={(e: any, value) => {
-              props.dateOfBirth(moment(e.$d).format("YYYY-MM-DD"));
+              props.setdateOfBirth(moment(e.$d).format("YYYY-MM-DD"));
             }}
             format="YYYY-MM-DD"
+            slotProps={{ textField: { fullWidth: true } }}
           />
         </LocalizationProvider>
       </div>
@@ -53,10 +54,10 @@ function ThirdStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">qualification</InputLabel>
+        <InputLabel htmlFor="component-simple">Qualification</InputLabel>
         <Input
           id="component-simple"
-          onChange={(e) => props.qualification(e.target.value)}
+          onChange={(e) => props.setqualification(e.target.value)}
         />
       </FormControl>
       <FormControl
@@ -65,10 +66,10 @@ function ThirdStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">pan</InputLabel>
+        <InputLabel htmlFor="component-simple">Pan</InputLabel>
         <Input
           id="component-simple"
-          onChange={(e) => props.pan(e.target.value)}
+          onChange={(e) => props.setpan(e.target.value)}
         />
       </FormControl>
       <FormControl
@@ -77,10 +78,10 @@ function ThirdStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">address</InputLabel>
+        <InputLabel htmlFor="component-simple">Address</InputLabel>
         <Input
           id="component-simple"
-          onChange={(e) => props.address(e.target.value)}
+          onChange={(e) => props.setaddress(e.target.value)}
         />
       </FormControl>
       <FormControl
@@ -89,10 +90,10 @@ function ThirdStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">occupation</InputLabel>
+        <InputLabel htmlFor="component-simple">Occupation</InputLabel>
         <Input
           id="component-simple"
-          onChange={(e) => props.occupation(e.target.value)}
+          onChange={(e) => props.setoccupation(e.target.value)}
         />
       </FormControl>
       <FormControl
@@ -101,10 +102,10 @@ function ThirdStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">experience</InputLabel>
+        <InputLabel htmlFor="component-simple">Experience</InputLabel>
         <Input
           id="component-simple"
-          onChange={(e) => props.experience(e.target.value)}
+          onChange={(e) => props.setexperience(e.target.value)}
         />
       </FormControl>
       <FormControl
@@ -113,10 +114,10 @@ function ThirdStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">landLine</InputLabel>
+        <InputLabel htmlFor="component-simple">LandLine</InputLabel>
         <Input
           id="component-simple"
-          onChange={(e) => props.landLine(e.target.value)}
+          onChange={(e) => props.setlandLine(e.target.value)}
         />
       </FormControl>
       <FormControl
@@ -125,10 +126,10 @@ function ThirdStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">mobileNumber</InputLabel>
+        <InputLabel htmlFor="component-simple">Mobile Number</InputLabel>
         <Input
           id="component-simple"
-          onChange={(e) => props.mobileNumber(e.target.value)}
+          onChange={(e) => props.setmobileNumber(e.target.value)}
         />
       </FormControl>
       <FormControl
@@ -138,11 +139,13 @@ function ThirdStep(props: any) {
         }}
       >
         <InputLabel htmlFor="component-simple">
-          associatedWithOthInstitutions
+          Associated With Oth Institutions
         </InputLabel>
         <Input
           id="component-simple"
-          onChange={(e) => props.associatedWithOthInstitutions(e.target.value)}
+          onChange={(e) =>
+            props.setassociatedWithOthInstitutions(e.target.value)
+          }
         />
       </FormControl>
       <FormControl
@@ -151,10 +154,10 @@ function ThirdStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">authorizedSignature</InputLabel>
+        <InputLabel htmlFor="component-simple">Authorized Signature</InputLabel>
         <Input
           id="component-simple"
-          onChange={(e) => props.authorizedSignature(e.target.value)}
+          onChange={(e) => props.setauthorizedSignature(e.target.value)}
         />
       </FormControl>
       <div
@@ -165,11 +168,12 @@ function ThirdStep(props: any) {
       >
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DatePicker
-            label="date Of Appointment"
+            label="Date Of Appointment"
             onChange={(e: any, value) => {
-              props.dateOfAppointment(moment(e.$d).format("YYYY-MM-DD"));
+              props.setdateOfAppointment(moment(e.$d).format("YYYY-MM-DD"));
             }}
             format="YYYY-MM-DD"
+            slotProps={{ textField: { fullWidth: true } }}
           />
         </LocalizationProvider>
       </div>
@@ -179,10 +183,10 @@ function ThirdStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">salary</InputLabel>
+        <InputLabel htmlFor="component-simple">Salary</InputLabel>
         <Input
           id="component-simple"
-          onChange={(e) => props.salary(e.target.value)}
+          onChange={(e) => props.setsalary(e.target.value)}
         />
       </FormControl>
       <FormControl
@@ -191,10 +195,10 @@ function ThirdStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">bankName</InputLabel>
+        <InputLabel htmlFor="component-simple">Bank Name</InputLabel>
         <Input
           id="component-simple"
-          onChange={(e) => props.bankName(e.target.value)}
+          onChange={(e) => props.setbankName(e.target.value)}
         />
       </FormControl>
       <FormControl
@@ -203,10 +207,10 @@ function ThirdStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">bankAddress</InputLabel>
+        <InputLabel htmlFor="component-simple">Bank Address</InputLabel>
         <Input
           id="component-simple"
-          onChange={(e) => props.bankAddress(e.target.value)}
+          onChange={(e) => props.setbankAddress(e.target.value)}
         />
       </FormControl>
       <FormControl
@@ -215,10 +219,10 @@ function ThirdStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">accountType</InputLabel>
+        <InputLabel htmlFor="component-simple">Account Type</InputLabel>
         <Input
           id="component-simple"
-          onChange={(e) => props.accountType(e.target.value)}
+          onChange={(e) => props.setaccountType(e.target.value)}
         />
       </FormControl>
       <FormControl
@@ -227,10 +231,10 @@ function ThirdStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">accountNumber</InputLabel>
+        <InputLabel htmlFor="component-simple">Account Number</InputLabel>
         <Input
           id="component-simple"
-          onChange={(e) => props.accountNumber(e.target.value)}
+          onChange={(e) => props.setaccountNumber(e.target.value)}
         />
       </FormControl>
       <FormControl
@@ -239,10 +243,10 @@ function ThirdStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">ifscCode</InputLabel>
+        <InputLabel htmlFor="component-simple">Ifsc Code</InputLabel>
         <Input
           id="component-simple"
-          onChange={(e) => props.ifscCode(e.target.value)}
+          onChange={(e) => props.setifscCode(e.target.value)}
         />
       </FormControl>
     </div>

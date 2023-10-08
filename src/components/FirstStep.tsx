@@ -2,10 +2,6 @@ import React from "react";
 import FormControl from "@mui/material/FormControl";
 import Input from "@mui/material/Input";
 import InputLabel from "@mui/material/InputLabel";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import moment from "moment";
 
 function FirstStep(props: any) {
   return (
@@ -22,7 +18,7 @@ function FirstStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">fpo Name</InputLabel>
+        <InputLabel htmlFor="component-simple">FPO Name</InputLabel>
         <Input
           id="component-simple"
           onChange={(e) => props.setfpoName(e.target.value)}
@@ -35,7 +31,7 @@ function FirstStep(props: any) {
         }}
       >
         <InputLabel htmlFor="component-simple">
-          name Of Resource Institute
+          Name Of Resource Institute
         </InputLabel>
         <Input
           id="component-simple"
@@ -48,7 +44,7 @@ function FirstStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">spoc Name</InputLabel>
+        <InputLabel htmlFor="component-simple">Spoc Name</InputLabel>
         <Input
           id="component-simple"
           onChange={(e) => props.setspocName(e.target.value)}
@@ -60,7 +56,7 @@ function FirstStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">poc Designation</InputLabel>
+        <InputLabel htmlFor="component-simple">Poc Designation</InputLabel>
         <Input
           id="component-simple"
           onChange={(e) => props.setpocDesignation(e.target.value)}
@@ -72,7 +68,7 @@ function FirstStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">spoc Mobile Number</InputLabel>
+        <InputLabel htmlFor="component-simple">Spoc Mobile Number</InputLabel>
         <Input
           id="component-simple"
           onChange={(e) => props.setspocMobileNumber(e.target.value)}
@@ -84,7 +80,7 @@ function FirstStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">spoc Email</InputLabel>
+        <InputLabel htmlFor="component-simple">Spoc Email</InputLabel>
         <Input
           id="component-simple"
           onChange={(e) => props.setspocEmail(e.target.value)}
@@ -96,7 +92,7 @@ function FirstStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">spoc Website</InputLabel>
+        <InputLabel htmlFor="component-simple">Spoc Website</InputLabel>
         <Input
           id="component-simple"
           onChange={(e) => props.setspocWebsite(e.target.value)}
@@ -108,7 +104,7 @@ function FirstStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">register Office</InputLabel>
+        <InputLabel htmlFor="component-simple">Register Office</InputLabel>
         <Input
           id="component-simple"
           onChange={(e) => props.setregisterOffice(e.target.value)}
@@ -121,7 +117,7 @@ function FirstStep(props: any) {
         }}
       >
         <InputLabel htmlFor="component-simple">
-          administrative Office
+          Administrative Office
         </InputLabel>
         <Input
           id="component-simple"
@@ -134,7 +130,7 @@ function FirstStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">rent Or Leased</InputLabel>
+        <InputLabel htmlFor="component-simple">Rent Or Leased</InputLabel>
         <Input
           id="component-simple"
           onChange={(e) => props.setrentOrLeased(e.target.value)}
@@ -146,7 +142,7 @@ function FirstStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">incorporation Period</InputLabel>
+        <InputLabel htmlFor="component-simple">Incorporation Period</InputLabel>
         <Input
           id="component-simple"
           onChange={(e) => props.setincorporationPeriod(e.target.value)}
@@ -158,7 +154,7 @@ function FirstStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">balance Sheet</InputLabel>
+        <InputLabel htmlFor="component-simple">Balance Sheet</InputLabel>
         <Input
           id="component-simple"
           onChange={(e) => props.setbalanceSheet(e.target.value)}
@@ -171,7 +167,7 @@ function FirstStep(props: any) {
         }}
       >
         <InputLabel htmlFor="component-simple">
-          subscribed Share Capital
+          Subscribed Share Capital
         </InputLabel>
         <Input
           id="component-simple"
@@ -184,7 +180,7 @@ function FirstStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">pan Available</InputLabel>
+        <InputLabel htmlFor="component-simple">Pan Available</InputLabel>
         <Input
           id="component-simple"
           onChange={(e) => props.setpanAvailable(e.target.value)}
@@ -196,7 +192,7 @@ function FirstStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">gst Available</InputLabel>
+        <InputLabel htmlFor="component-simple">GST Available</InputLabel>
         <Input
           id="component-simple"
           onChange={(e) => props.setgstAvailable(e.target.value)}
@@ -208,7 +204,7 @@ function FirstStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">ceo</InputLabel>
+        <InputLabel htmlFor="component-simple">CEO</InputLabel>
         <Input
           id="component-simple"
           onChange={(e) => props.setceo(e.target.value)}
@@ -221,7 +217,7 @@ function FirstStep(props: any) {
         }}
       >
         <InputLabel htmlFor="component-simple">
-          total Number Of Sml Farmer
+          Total Number Of Sml Farmer
         </InputLabel>
         <Input
           id="component-simple"
@@ -235,7 +231,7 @@ function FirstStep(props: any) {
         }}
       >
         <InputLabel htmlFor="component-simple">
-          total Land Holding Of Sml Farmer
+          Total Land Holding Of Sml Farmer
         </InputLabel>
         <Input
           id="component-simple"
@@ -249,7 +245,7 @@ function FirstStep(props: any) {
         }}
       >
         <InputLabel htmlFor="component-simple">
-          total Number Of Med Farmer
+          Total Number Of Med Farmer
         </InputLabel>
         <Input
           id="component-simple"
@@ -263,7 +259,7 @@ function FirstStep(props: any) {
         }}
       >
         <InputLabel htmlFor="component-simple">
-          total Land Holding Of Med Farmer
+          Total Land Holding Of Med Farmer
         </InputLabel>
         <Input
           id="component-simple"
@@ -277,7 +273,7 @@ function FirstStep(props: any) {
         }}
       >
         <InputLabel htmlFor="component-simple">
-          total Number Of Big Farmer
+          Total Number Of Big Farmer
         </InputLabel>
         <Input
           id="component-simple"
@@ -291,7 +287,7 @@ function FirstStep(props: any) {
         }}
       >
         <InputLabel htmlFor="component-simple">
-          total Land Holding Of Big Farmer
+          Total Land Holding Of Big Farmer
         </InputLabel>
         <Input
           id="component-simple"
@@ -305,7 +301,7 @@ function FirstStep(props: any) {
         }}
       >
         <InputLabel htmlFor="component-simple">
-          number Of Woman Share Holders
+          Number Of Woman Share Holders
         </InputLabel>
         <Input
           id="component-simple"
@@ -319,7 +315,7 @@ function FirstStep(props: any) {
         }}
       >
         <InputLabel htmlFor="component-simple">
-          number Of St Share Holders
+          Number Of St Share Holders
         </InputLabel>
         <Input
           id="component-simple"
@@ -333,7 +329,7 @@ function FirstStep(props: any) {
         }}
       >
         <InputLabel htmlFor="component-simple">
-          number Of Sc Share Holders
+          Number Of Sc Share Holders
         </InputLabel>
         <Input
           id="component-simple"
@@ -347,7 +343,7 @@ function FirstStep(props: any) {
         }}
       >
         <InputLabel htmlFor="component-simple">
-          increase In Last Six Months
+          Increase In Last Six Months
         </InputLabel>
         <Input
           id="component-simple"
@@ -361,7 +357,7 @@ function FirstStep(props: any) {
         }}
       >
         <InputLabel htmlFor="component-simple">
-          number Of Active Members
+          Number Of Active Members
         </InputLabel>
         <Input
           id="component-simple"
@@ -375,7 +371,7 @@ function FirstStep(props: any) {
         }}
       >
         <InputLabel htmlFor="component-simple">
-          non Members Availing Service Fpc
+          Non Members Availing Service Fpc
         </InputLabel>
         <Input
           id="component-simple"
@@ -390,7 +386,7 @@ function FirstStep(props: any) {
           margin: "10px 0px",
         }}
       >
-        <InputLabel htmlFor="component-simple">fpo Role</InputLabel>
+        <InputLabel htmlFor="component-simple">FPO Role</InputLabel>
         <Input
           id="component-simple"
           onChange={(e) => props.setfpoRole(e.target.value)}

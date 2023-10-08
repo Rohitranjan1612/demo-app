@@ -22,11 +22,12 @@ function SecondStep(props: any) {
       >
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DatePicker
-            label="ertilizer Validity Date"
+            label="Ertilizer Validity Date"
             onChange={(e: any, value) => {
-              props.ertilizerValidityDate(moment(e.$d).format("YYYY-MM-DD"));
+              props.setertilizerValidityDate(moment(e.$d).format("YYYY-MM-DD"));
             }}
             format="YYYY-MM-DD"
+            slotProps={{ textField: { fullWidth: true } }}
           />
         </LocalizationProvider>
       </div>
@@ -37,12 +38,13 @@ function SecondStep(props: any) {
       >
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DatePicker
-            label="pesticide Insecticide Validity Date"
+            label="Pesticide Insecticide Validity Date"
             onChange={(e: any, value) => {
-              props.pesticideInsecticideValidityDate(
+              props.setpesticideInsecticideValidityDate(
                 moment(e.$d).format("YYYY-MM-DD")
               );
             }}
+            slotProps={{ textField: { fullWidth: true } }}
           />
         </LocalizationProvider>
       </div>
@@ -53,10 +55,11 @@ function SecondStep(props: any) {
       >
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DatePicker
-            label="seeds Validity Date"
+            label="Seeds Validity Date"
             onChange={(e: any, value) => {
-              props.seedsValidityDate(moment(e.$d).format("YYYY-MM-DD"));
+              props.setseedsValidityDate(moment(e.$d).format("YYYY-MM-DD"));
             }}
+            slotProps={{ textField: { fullWidth: true } }}
           />
         </LocalizationProvider>
       </div>
@@ -67,26 +70,13 @@ function SecondStep(props: any) {
       >
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DatePicker
-            label="mport Export Validity Date"
+            label="Mport Export Validity Date"
             onChange={(e: any, value) => {
-              props.mportExportValidityDate(moment(e.$d).format("YYYY-MM-DD"));
-            }}
-          />
-        </LocalizationProvider>
-      </div>
-      <div
-        style={{
-          margin: "10px 0px",
-        }}
-      >
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <DatePicker
-            label="directMarketing Validity Date"
-            onChange={(e: any, value) => {
-              props.directMarketingValidityDate(
+              props.setmportExportValidityDate(
                 moment(e.$d).format("YYYY-MM-DD")
               );
             }}
+            slotProps={{ textField: { fullWidth: true } }}
           />
         </LocalizationProvider>
       </div>
@@ -97,10 +87,13 @@ function SecondStep(props: any) {
       >
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DatePicker
-            label="fssai Validity Date"
+            label="Direct Marketing Validity Date"
             onChange={(e: any, value) => {
-              props.fssaiValidityDate(moment(e.$d).format("YYYY-MM-DD"));
+              props.setdirectMarketingValidityDate(
+                moment(e.$d).format("YYYY-MM-DD")
+              );
             }}
+            slotProps={{ textField: { fullWidth: true } }}
           />
         </LocalizationProvider>
       </div>
@@ -111,10 +104,11 @@ function SecondStep(props: any) {
       >
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DatePicker
-            label="gst Validity Date"
+            label="Fssai Validity Date"
             onChange={(e: any, value) => {
-              props.gstValidityDate(moment(e.$d).format("YYYY-MM-DD"));
+              props.setfssaiValidityDate(moment(e.$d).format("YYYY-MM-DD"));
             }}
+            slotProps={{ textField: { fullWidth: true } }}
           />
         </LocalizationProvider>
       </div>
@@ -125,10 +119,26 @@ function SecondStep(props: any) {
       >
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DatePicker
-            label="pollution Validity Date"
+            label="GST Validity Date"
             onChange={(e: any, value) => {
-              props.pollutionValidityDate(moment(e.$d).format("YYYY-MM-DD"));
+              props.setgstValidityDate(moment(e.$d).format("YYYY-MM-DD"));
             }}
+            slotProps={{ textField: { fullWidth: true } }}
+          />
+        </LocalizationProvider>
+      </div>
+      <div
+        style={{
+          margin: "10px 0px",
+        }}
+      >
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <DatePicker
+            label="Pollution Validity Date"
+            onChange={(e: any, value) => {
+              props.setpollutionValidityDate(moment(e.$d).format("YYYY-MM-DD"));
+            }}
+            slotProps={{ textField: { fullWidth: true } }}
           />
         </LocalizationProvider>
       </div>

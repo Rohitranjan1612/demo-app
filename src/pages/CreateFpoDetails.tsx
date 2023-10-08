@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-import StepContent from "@mui/material/StepContent";
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
@@ -12,6 +11,7 @@ import style from "../styles/createPosts.module.css";
 import FirstStep from "../components/FirstStep";
 import SecondStep from "../components/SecondStep";
 import ThirdStep from "../components/ThirdStep";
+import ForthStep from "../components/ForthStep";
 
 const steps = [
   {
@@ -23,16 +23,16 @@ const steps = [
   {
     label: "FPO Staff Request",
   },
+  {
+    label: "FPO Other Request",
+  },
 ];
 function CreateFpoDetails() {
   // const [posts, setPosts] = useState([]);
   // const [loading, setLoading] = useState(false);
-  // const getPosts = async () => {
-  //   const details: any = {};
-  //   const data: any = await addFpoDetails(details);
-  //   console.log({ data });
-  // };
+
   const [fpoName, setfpoName] = useState(null);
+  const [indexStep, setindexStep] = useState(0);
   const [nameOfResourceInstitute, setnameOfResourceInstitute] = useState(null);
   const [spocName, setspocName] = useState(null);
   const [pocDesignation, setpocDesignation] = useState(null);
@@ -97,19 +97,123 @@ function CreateFpoDetails() {
   const [accountType, setaccountType] = useState(null);
   const [accountNumber, setaccountNumber] = useState(null);
   const [ifscCode, setifscCode] = useState(null);
-  
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [nonMembersAvailingServiceFpc, setnonMembersAvailingServiceFpc] =
+    useState(null);
+  const [staffPhoto, setstaffPhoto] = useState(null);
+  const [registeredAddress, setregisteredAddress] = useState(null);
+  const [accountDetails, setaccountDetails] = useState(null);
+  const [fpoDetailsId, setfpoDetailsId] = useState(null);
+  const [gstValidity, setgstValidity] = useState(null);
+  const [pollutionValidity, setpollutionValidity] = useState(null);
+  const [fssaiValidity, setfssaiValidity] = useState(null);
+  const [directMarketingValidity, setdirectMarketingValidity] = useState(null);
+  const [importExportValidity, setimportExportValidity] = useState(null);
+  const [seedsValidity, setseedsValidity] = useState(null);
+  const [pesticideInsecticideValidity, setpesticideInsecticideValidity] =
+    useState(null);
+  const [fertilizerLicenseValidity, setfertilizerLicenseValidity] =
+    useState(null);
 
-  const handleNext = () => {
+  const [activeStep, setActiveStep] = React.useState(0);
+  const getPosts = async () => {
+    const details: any = {
+      fpoDetailsId,
+      accountDetails: accountDetails,
+      gstValidity,
+      pollutionValidity,
+      fssaiValidity,
+      directMarketingValidity,
+      importExportValidity,
+      seedsValidity,
+      pesticideInsecticideValidity,
+      fertilizerLicenseValidity,
+      gstAvailable,
+      panAvailable,
+      incorporationPeriod,
+      rentOrLeased,
+      registeredAddress: registeredAddress,
+      staffPhoto: staffPhoto,
+      fpoDetailsRequest: JSON.stringify({
+        fpoName,
+        nameOfResourceInstitute,
+        spocName,
+        pocDesignation,
+        spocMobileNumber,
+        spocEmail,
+        spocWebsite,
+        registerOffice,
+        administrativeOffice,
+        rentOrLeased,
+        incorporationPeriod,
+        balanceSheet,
+        subscribedShareCapital,
+        panAvailable,
+        gstAvailable,
+        ceo,
+        totalNumberOfSmlFarmer,
+        totalLandHoldingOfSmlFarmer,
+        totalNumberOfMedFarmer,
+        totalLandHoldingOfMedFarmer,
+        totalNumberOfBigFarmer,
+        totalLandHoldingOfBigFarmer,
+        numberOfWomanShareHolders,
+        numberOfStShareHolders,
+        numberOfScShareHolders,
+        increaseInLastSixMonths,
+        numberOfActiveMembers,
+        nonMembersAvailingServiceFpc,
+        fpoRole,
+        fpoComplianceRequest: {
+          ertilizerValidityDate,
+          pesticideInsecticideValidityDate,
+          seedsValidityDate,
+          mportExportValidityDate,
+          directMarketingValidityDate,
+          fssaiValidityDate,
+          gstValidityDate,
+          pollutionValidityDate,
+        },
+        fpoStaffRequest: {
+          name,
+          dateOfBirth,
+          qualification,
+          pan,
+          address,
+          occupation,
+          experience,
+          landLine,
+          mobileNumber,
+          associatedWithOthInstitutions,
+          authorizedSignature,
+          dateOfAppointment,
+          salary,
+          bankName,
+          bankAddress,
+          accountType,
+          accountNumber,
+          ifscCode,
+        },
+      }),
+    };
+    const data: any = await addFpoDetails(details);
+    console.log({ data });
+  };
+  const handleNext = (flag?: any) => {
+    if (flag) {
+      getPosts();
+    }
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setindexStep((prevActiveStep) => prevActiveStep + 1);
   };
 
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    setindexStep((prevActiveStep) => prevActiveStep - 1);
   };
 
   const handleReset = () => {
     setActiveStep(0);
+    setindexStep(0);
   };
 
   return (
@@ -119,122 +223,131 @@ function CreateFpoDetails() {
         <Stepper activeStep={activeStep} alternativeLabel>
           {steps.map((step, index) => (
             <Step key={step.label}>
-              <StepLabel
-                optional={
-                  index === 2 ? (
-                    <Typography variant="caption">Last step</Typography>
-                  ) : null
-                }
-              >
-                {step.label}
-              </StepLabel>
-              <StepContent>
-                <Box>
-                  {index === 0 ? (
-                    <FirstStep
-                      setfpoName={setfpoName}
-                      setnameOfResourceInstitute={setnameOfResourceInstitute}
-                      setspocName={setspocName}
-                      setpocDesignation={setpocDesignation}
-                      setspocMobileNumber={setspocMobileNumber}
-                      setspocEmail={setspocEmail}
-                      setspocWebsite={setspocWebsite}
-                      setregisterOffice={setregisterOffice}
-                      setadministrativeOffice={setadministrativeOffice}
-                      setrentOrLeased={setrentOrLeased}
-                      setincorporationPeriod={setincorporationPeriod}
-                      setbalanceSheet={setbalanceSheet}
-                      setsubscribedShareCapital={setsubscribedShareCapital}
-                      setpanAvailable={setpanAvailable}
-                      setgstAvailable={setgstAvailable}
-                      setceo={setceo}
-                      settotalNumberOfSmlFarmer={settotalNumberOfSmlFarmer}
-                      settotalLandHoldingOfSmlFarmer={
-                        settotalLandHoldingOfSmlFarmer
-                      }
-                      settotalNumberOfMedFarmer={settotalNumberOfMedFarmer}
-                      settotalLandHoldingOfMedFarmer={
-                        settotalLandHoldingOfMedFarmer
-                      }
-                      settotalNumberOfBigFarmer={settotalNumberOfBigFarmer}
-                      settotalLandHoldingOfBigFarmer={
-                        settotalLandHoldingOfBigFarmer
-                      }
-                      setnumberOfWomanShareHolders={
-                        setnumberOfWomanShareHolders
-                      }
-                      setnumberOfStShareHolders={setnumberOfStShareHolders}
-                      setnumberOfScShareHolders={setnumberOfScShareHolders}
-                      setincreaseInLastSixMonths={setincreaseInLastSixMonths}
-                      setnumberOfActiveMembers={setnumberOfActiveMembers}
-                      setfpoRole={setfpoRole}
-                    />
-                  ) : index === 1 ? (
-                    <SecondStep
-                      setpesticideInsecticideValidityDate={
-                        setpesticideInsecticideValidityDate
-                      }
-                      setseedsValidityDate={setseedsValidityDate}
-                      setmportExportValidityDate={setmportExportValidityDate}
-                      setdirectMarketingValidityDate={
-                        setdirectMarketingValidityDate
-                      }
-                      setfssaiValidityDate={setfssaiValidityDate}
-                      setgstValidityDate={setgstValidityDate}
-                      setpollutionValidityDate={setpollutionValidityDate}
-                    />
-                  ) : (
-                    <ThirdStep
-                      setname={setname}
-                      setdateOfBirth={setdateOfBirth}
-                      setqualification={setqualification}
-                      setpan={setpan}
-                      setaddress={setaddress}
-                      setoccupation={setoccupation}
-                      setexperience={setexperience}
-                      setlandLine={setlandLine}
-                      setmobileNumber={setmobileNumber}
-                      setassociatedWithOthInstitutions={
-                        setassociatedWithOthInstitutions
-                      }
-                      setauthorizedSignature={setauthorizedSignature}
-                      setdateOfAppointment={setdateOfAppointment}
-                      setsalary={setsalary}
-                      setbankName={setbankName}
-                      setbankAddress={setbankAddress}
-                      setaccountType={setaccountType}
-                      setaccountNumber={setaccountNumber}
-                      setifscCode={setifscCode}
-                    />
-                  )}
-                  <div>
-                    <Button
-                      variant="contained"
-                      onClick={handleNext}
-                      sx={{ mt: 1, mr: 1 }}
-                    >
-                      {index === steps.length - 1 ? "Finish" : "Continue"}
-                    </Button>
-                    <Button
-                      disabled={index === 0}
-                      onClick={handleBack}
-                      sx={{ mt: 1, mr: 1 }}
-                    >
-                      Back
-                    </Button>
-                  </div>
-                </Box>
-              </StepContent>
+              <StepLabel>{step.label}</StepLabel>
             </Step>
           ))}
         </Stepper>
-        {activeStep === steps.length && (
+        {activeStep === steps.length ? (
           <Paper square elevation={0} sx={{ p: 3 }}>
             <Typography>All steps completed - you&apos;re finished</Typography>
             <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
               Reset
             </Button>
           </Paper>
+        ) : (
+          <div
+            style={{
+              width: "50%",
+            }}
+          >
+            {indexStep === 0 ? (
+              <FirstStep
+                setfpoName={setfpoName}
+                setnameOfResourceInstitute={setnameOfResourceInstitute}
+                setspocName={setspocName}
+                setpocDesignation={setpocDesignation}
+                setspocMobileNumber={setspocMobileNumber}
+                setspocEmail={setspocEmail}
+                setspocWebsite={setspocWebsite}
+                setregisterOffice={setregisterOffice}
+                setadministrativeOffice={setadministrativeOffice}
+                setrentOrLeased={setrentOrLeased}
+                setincorporationPeriod={setincorporationPeriod}
+                setbalanceSheet={setbalanceSheet}
+                setsubscribedShareCapital={setsubscribedShareCapital}
+                setpanAvailable={setpanAvailable}
+                setgstAvailable={setgstAvailable}
+                setceo={setceo}
+                settotalNumberOfSmlFarmer={settotalNumberOfSmlFarmer}
+                settotalLandHoldingOfSmlFarmer={settotalLandHoldingOfSmlFarmer}
+                settotalNumberOfMedFarmer={settotalNumberOfMedFarmer}
+                settotalLandHoldingOfMedFarmer={settotalLandHoldingOfMedFarmer}
+                settotalNumberOfBigFarmer={settotalNumberOfBigFarmer}
+                settotalLandHoldingOfBigFarmer={settotalLandHoldingOfBigFarmer}
+                setnumberOfWomanShareHolders={setnumberOfWomanShareHolders}
+                setnonMembersAvailingServiceFpc={
+                  setnonMembersAvailingServiceFpc
+                }
+                setnumberOfStShareHolders={setnumberOfStShareHolders}
+                setnumberOfScShareHolders={setnumberOfScShareHolders}
+                setincreaseInLastSixMonths={setincreaseInLastSixMonths}
+                setnumberOfActiveMembers={setnumberOfActiveMembers}
+                setfpoRole={setfpoRole}
+              />
+            ) : indexStep === 1 ? (
+              <SecondStep
+                setpesticideInsecticideValidityDate={
+                  setpesticideInsecticideValidityDate
+                }
+                setertilizerValidityDate={setertilizerValidityDate}
+                setseedsValidityDate={setseedsValidityDate}
+                setmportExportValidityDate={setmportExportValidityDate}
+                setdirectMarketingValidityDate={setdirectMarketingValidityDate}
+                setfssaiValidityDate={setfssaiValidityDate}
+                setgstValidityDate={setgstValidityDate}
+                setpollutionValidityDate={setpollutionValidityDate}
+              />
+            ) : indexStep === 2 ? (
+              <ThirdStep
+                setname={setname}
+                setdateOfBirth={setdateOfBirth}
+                setqualification={setqualification}
+                setpan={setpan}
+                setaddress={setaddress}
+                setoccupation={setoccupation}
+                setexperience={setexperience}
+                setlandLine={setlandLine}
+                setmobileNumber={setmobileNumber}
+                setassociatedWithOthInstitutions={
+                  setassociatedWithOthInstitutions
+                }
+                setauthorizedSignature={setauthorizedSignature}
+                setdateOfAppointment={setdateOfAppointment}
+                setsalary={setsalary}
+                setbankName={setbankName}
+                setbankAddress={setbankAddress}
+                setaccountType={setaccountType}
+                setaccountNumber={setaccountNumber}
+                setifscCode={setifscCode}
+              />
+            ) : (
+              <ForthStep
+                setfpoDetailsId={setfpoDetailsId}
+                setgstValidity={setgstValidity}
+                setpollutionValidity={setpollutionValidity}
+                setfssaiValidity={setfssaiValidity}
+                setdirectMarketingValidity={setdirectMarketingValidity}
+                setimportExportValidity={setimportExportValidity}
+                setseedsValidity={setseedsValidity}
+                setpesticideInsecticideValidity={
+                  setpesticideInsecticideValidity
+                }
+                setfertilizerLicenseValidity={setfertilizerLicenseValidity}
+                setstaffPhoto={setstaffPhoto}
+                setregisteredAddress={setregisteredAddress}
+                setaccountDetails={setaccountDetails}
+                accountDetails={accountDetails}
+                registeredAddress={registeredAddress}
+                staffPhoto={staffPhoto}
+              />
+            )}
+            <div style={{ marginLeft: "80px" }}>
+              <Button
+                variant="contained"
+                onClick={() => handleNext(indexStep === steps.length - 1)}
+                sx={{ mt: 1, mr: 1 }}
+              >
+                {indexStep === steps.length - 1 ? "Finish" : "Continue"}
+              </Button>
+              <Button
+                disabled={indexStep === 0}
+                onClick={handleBack}
+                sx={{ mt: 1, mr: 1 }}
+              >
+                Back
+              </Button>
+            </div>
+          </div>
         )}
       </Box>
     </div>
