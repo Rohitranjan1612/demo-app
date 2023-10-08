@@ -78,7 +78,7 @@ export default function SideBar() {
           <MenuIcon />
         </button>
         <List style={{ backgroundColor: "#1c1b20", height: "100%" }}>
-          <ListItem
+          {/* <ListItem
             key={"All Posts"}
             disablePadding
             sx={{ display: "block" }}
@@ -123,13 +123,13 @@ export default function SideBar() {
                 sx={{ opacity: open ? 1 : 0 }}
               />
             </ListItemButton>
-          </ListItem>
+          </ListItem> */}
           <ListItem
             key={"All FPO Details"}
             disablePadding
             sx={{ display: "block" }}
             style={
-              location.pathname === "/all-fpo-details"
+              location.pathname === "/"
                 ? {
                     backgroundColor: "#9747FF",
                     color: "#fff",
@@ -141,7 +141,7 @@ export default function SideBar() {
           >
             <ListItemButton
               onClick={() => {
-                navigate("/all-fpo-details");
+                navigate("/");
               }}
               sx={{
                 minHeight: 48,

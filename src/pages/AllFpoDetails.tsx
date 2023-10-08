@@ -49,22 +49,29 @@ function Row(props: { row: any }) {
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
           <Collapse in={open} timeout="auto" unmountOnExit>
-            <Box sx={{ margin: 1 }}>
-              <Typography variant="h6" gutterBottom component="div">
+            <Box sx={{ marginTop: "20px", marginBottom: "20px" }}>
+              <Typography
+                variant="h6"
+                gutterBottom
+                component="div"
+                style={{ fontWeight: 600 }}
+              >
                 FPO Staff Details
               </Typography>
               <Table size="small" aria-label="purchases">
                 <TableHead>
                   <TableRow>
-                    <TableCell>name</TableCell>
-                    <TableCell>fpoStaffImage</TableCell>
-                    <TableCell>bankImage</TableCell>
-                    <TableCell>bankName</TableCell>
+                    <TableCell style={{ fontWeight: 600 }}>name</TableCell>
+                    <TableCell style={{ fontWeight: 600 }}>
+                      fpoStaffImage
+                    </TableCell>
+                    <TableCell style={{ fontWeight: 600 }}>bankImage</TableCell>
+                    <TableCell style={{ fontWeight: 600 }}>bankName</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   <TableRow key={row.fpoStaffDetails.fpoStaffDetailsId}>
-                    <TableCell>{row.fpoStaffDetails.name}</TableCell>
+                    <TableCell>{row.fpoStaffDetails.name || "--"}</TableCell>
                     <TableCell component="th" scope="row">
                       <img
                         id="registerOfficeImage"
@@ -81,40 +88,66 @@ function Row(props: { row: any }) {
                         src={row.fpoStaffDetails.bankImage}
                       />
                     </TableCell>
-                    <TableCell>{row.fpoStaffDetails.bankName}</TableCell>
+                    <TableCell>
+                      {row.fpoStaffDetails.bankName || "--"}
+                    </TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
             </Box>
-            <Box sx={{ margin: 1 }}>
-              <Typography variant="h6" gutterBottom component="div">
+            <Box sx={{ marginTop: "20px", marginBottom: "20px" }}>
+              <Typography
+                variant="h6"
+                gutterBottom
+                component="div"
+                style={{ fontWeight: 600 }}
+              >
                 FPO Compliance
               </Typography>
               <Table size="small" aria-label="purchases">
                 <TableHead>
                   <TableRow>
-                    <TableCell>directMarketingValidityDate</TableCell>
-                    <TableCell>fssaiValidityDate</TableCell>
-                    <TableCell>gstValidityDate</TableCell>
-                    <TableCell>pesticideInsecticideValidityDate</TableCell>
-                    <TableCell>pollutionValidityDate</TableCell>
-                    <TableCell>seedsValidityDate</TableCell>
+                    <TableCell style={{ fontWeight: 600 }}>
+                      Direct Marketing Validity Date
+                    </TableCell>
+                    <TableCell style={{ fontWeight: 600 }}>
+                      Fssai Validity Date
+                    </TableCell>
+                    <TableCell style={{ fontWeight: 600 }}>
+                      GST Validity Date
+                    </TableCell>
+                    <TableCell style={{ fontWeight: 600 }}>
+                      Pesticide Insecticide Validity Date
+                    </TableCell>
+                    <TableCell style={{ fontWeight: 600 }}>
+                      Pollution Validity Date
+                    </TableCell>
+                    <TableCell style={{ fontWeight: 600 }}>
+                      Seeds Validity Date
+                    </TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   <TableRow key={row.fpoDetailsId}>
                     <TableCell>
-                      {row.fpoCompliance.directMarketingValidityDate}
-                    </TableCell>
-                    <TableCell>{row.fpoCompliance.fssaiValidityDate}</TableCell>
-                    <TableCell>{row.fpoCompliance.gstValidityDate}</TableCell>
-                    <TableCell>
-                      {row.fpoCompliance.pesticideInsecticideValidityDate}
+                      {row.fpoCompliance.directMarketingValidityDate || "--"}
                     </TableCell>
                     <TableCell>
-                      {row.fpoCompliance.pollutionValidityDate}
+                      {row.fpoCompliance.fssaiValidityDate || "--"}
                     </TableCell>
-                    <TableCell>{row.fpoCompliance.seedsValidityDate}</TableCell>
+                    <TableCell>
+                      {row.fpoCompliance.gstValidityDate || "--"}
+                    </TableCell>
+                    <TableCell>
+                      {row.fpoCompliance.pesticideInsecticideValidityDate ||
+                        "--"}
+                    </TableCell>
+                    <TableCell>
+                      {row.fpoCompliance.pollutionValidityDate || "--"}
+                    </TableCell>
+                    <TableCell>
+                      {row.fpoCompliance.seedsValidityDate || "--"}
+                    </TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
@@ -160,7 +193,7 @@ function AllFpoDetails() {
   };
   return (
     <div style={{ margin: "10px 20px 20px 85px" }}>
-      <div className={style.header}>All Posts</div>
+      <div className={style.header}>All FPO Details</div>
       <input
         type="text"
         onChange={(e: any) => handleSearch(e.target.value)}
@@ -172,11 +205,15 @@ function AllFpoDetails() {
           <TableHead>
             <TableRow>
               <TableCell />
-              <TableCell>Id</TableCell>
-              <TableCell>FPO Name</TableCell>
-              <TableCell>FPO Role</TableCell>
-              <TableCell>Name Of Resource Institute</TableCell>
-              <TableCell>Register Office Image</TableCell>
+              <TableCell style={{ fontWeight: 600 }}>Id</TableCell>
+              <TableCell style={{ fontWeight: 600 }}>FPO Name</TableCell>
+              <TableCell style={{ fontWeight: 600 }}>FPO Role</TableCell>
+              <TableCell style={{ fontWeight: 600 }}>
+                Name Of Resource Institute
+              </TableCell>
+              <TableCell style={{ fontWeight: 600 }}>
+                Register Office Image
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

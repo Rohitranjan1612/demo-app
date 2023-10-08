@@ -113,11 +113,12 @@ function CreateFpoDetails() {
     useState(null);
   const [fertilizerLicenseValidity, setfertilizerLicenseValidity] =
     useState(null);
+  const [errorMessage, setError] = useState(null);
 
   const [activeStep, setActiveStep] = React.useState(0);
   const getPosts = async () => {
     const details: any = {
-      fpoDetailsId,
+      // fpoDetailsId,
       accountDetails: accountDetails,
       gstValidity,
       pollutionValidity,
@@ -197,6 +198,9 @@ function CreateFpoDetails() {
     };
     const data: any = await addFpoDetails(details);
     console.log({ data });
+    if (data.data.status === "0") {
+      setError(data.data.message);
+    }
   };
   const handleNext = (flag?: any) => {
     if (flag) {
@@ -210,8 +214,13 @@ function CreateFpoDetails() {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
     setindexStep((prevActiveStep) => prevActiveStep - 1);
   };
-
+  const handleTryAgain = () => {
+    setError(null);
+    setActiveStep(0);
+    setindexStep(0);
+  };
   const handleReset = () => {
+    setError(null);
     setActiveStep(0);
     setindexStep(0);
     setfpoName(null);
@@ -296,8 +305,20 @@ function CreateFpoDetails() {
         </Stepper>
         {activeStep === steps.length ? (
           <Paper square elevation={0} sx={{ p: 3 }}>
-            <Typography>All steps completed - FPO details is added</Typography>
-            <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
+            <Typography color={errorMessage ? "error" : "black"}>
+              {errorMessage ? "Error: " : null}
+              {errorMessage || "All steps completed - FPO details is added"}
+            </Typography>
+            {errorMessage ? (
+              <Button onClick={handleTryAgain} sx={{ mt: 1, mr: 1 }}>
+                Try Again
+              </Button>
+            ) : null}
+            <Button
+              onClick={handleReset}
+              sx={{ mt: 1, mr: 1 }}
+              color={errorMessage ? "error" : "primary"}
+            >
               Reset
             </Button>
           </Paper>

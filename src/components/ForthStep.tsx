@@ -28,7 +28,7 @@ function ForthStep(props: any) {
         flexDirection: "column",
       }}
     >
-      <FormControl
+      {/* <FormControl
         variant="standard"
         style={{
           margin: "10px 0px",
@@ -40,7 +40,7 @@ function ForthStep(props: any) {
           onChange={(e) => props.setfpoDetailsId(e.target.value)}
           value={props.fpoDetailsId}
         />
-      </FormControl>
+      </FormControl> */}
       <FormControl
         variant="standard"
         style={{

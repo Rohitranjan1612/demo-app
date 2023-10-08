@@ -8,9 +8,9 @@ export default function SideBar() {
   return (
     <React.StrictMode>
       <Routes>
-        <Route path="/" element={<AllPosts />} />
+        {/* <Route path="/" element={<AllPosts />} /> */}
         <Route path="/create-fpo-details" element={<CreateFpoDetails />} />
-        <Route path="/all-fpo-details" element={<AllFpoDetails />} />
+        <Route path="/" element={<AllFpoDetails />} />
       </Routes>
     </React.StrictMode>
   );
