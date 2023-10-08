@@ -17,7 +17,12 @@ export function addFpoDetails(data: any) {
   formData.append("accountDetails", data.accountDetails);
   formData.append("registeredAddress", data.registeredAddress);
   formData.append("staffPhoto", data.staffPhoto);
-  formData.append("fpoDetailsRequest", data.fpoDetailsRequest);
+  formData.append(
+    "fpoDetailsRequest",
+    new Blob([data.fpoDetailsRequest], {
+      type: "application/json",
+    })
+  );
   formData.append("fpoDetailsId", data.fpoDetailsId);
   formData.append("gstValidity", data.gstValidity);
   formData.append("pollutionValidity", data.pollutionValidity);
