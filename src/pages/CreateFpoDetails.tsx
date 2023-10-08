@@ -214,6 +214,73 @@ function CreateFpoDetails() {
   const handleReset = () => {
     setActiveStep(0);
     setindexStep(0);
+    setfpoName(null);
+    setnameOfResourceInstitute(null);
+    setspocName(null);
+    setpocDesignation(null);
+    setspocMobileNumber(null);
+    setspocEmail(null);
+    setspocWebsite(null);
+    setregisterOffice(null);
+    setadministrativeOffice(null);
+    setrentOrLeased(null);
+    setincorporationPeriod(null);
+    setbalanceSheet(null);
+    setsubscribedShareCapital(null);
+    setpanAvailable(null);
+    setgstAvailable(null);
+    setceo(null);
+    settotalNumberOfSmlFarmer(null);
+    settotalLandHoldingOfSmlFarmer(null);
+    settotalNumberOfMedFarmer(null);
+    settotalLandHoldingOfMedFarmer(null);
+    settotalNumberOfBigFarmer(null);
+    settotalLandHoldingOfBigFarmer(null);
+    setnumberOfWomanShareHolders(null);
+    setnumberOfStShareHolders(null);
+    setnumberOfScShareHolders(null);
+    setincreaseInLastSixMonths(null);
+    setnumberOfActiveMembers(null);
+    setpesticideInsecticideValidityDate(null);
+    setfpoRole(null);
+    setseedsValidityDate(null);
+    setmportExportValidityDate(null);
+    setdirectMarketingValidityDate(null);
+    setfssaiValidityDate(null);
+    setgstValidityDate(null);
+    setpollutionValidityDate(null);
+    setertilizerValidityDate(null);
+    setname(null);
+    setdateOfBirth(null);
+    setqualification(null);
+    setpan(null);
+    setaddress(null);
+    setoccupation(null);
+    setexperience(null);
+    setlandLine(null);
+    setmobileNumber(null);
+    setassociatedWithOthInstitutions(null);
+    setauthorizedSignature(null);
+    setdateOfAppointment(null);
+    setsalary(null);
+    setbankName(null);
+    setbankAddress(null);
+    setaccountType(null);
+    setaccountNumber(null);
+    setifscCode(null);
+    setnonMembersAvailingServiceFpc(null);
+    setstaffPhoto(null);
+    setregisteredAddress(null);
+    setaccountDetails(null);
+    setfpoDetailsId(null);
+    setgstValidity(null);
+    setpollutionValidity(null);
+    setfssaiValidity(null);
+    setdirectMarketingValidity(null);
+    setimportExportValidity(null);
+    setseedsValidity(null);
+    setpesticideInsecticideValidity(null);
+    setfertilizerLicenseValidity(null);
   };
 
   return (
@@ -229,7 +296,7 @@ function CreateFpoDetails() {
         </Stepper>
         {activeStep === steps.length ? (
           <Paper square elevation={0} sx={{ p: 3 }}>
-            <Typography>All steps completed - you&apos;re finished</Typography>
+            <Typography>All steps completed - FPO details is added</Typography>
             <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
               Reset
             </Button>
