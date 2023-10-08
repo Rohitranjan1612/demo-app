@@ -125,6 +125,50 @@ export default function SideBar() {
             </ListItemButton>
           </ListItem>
           <ListItem
+            key={"All FPO Details"}
+            disablePadding
+            sx={{ display: "block" }}
+            style={
+              location.pathname === "/all-fpo-details"
+                ? {
+                    backgroundColor: "#9747FF",
+                    color: "#fff",
+                  }
+                : {
+                    color: "#fff",
+                  }
+            }
+          >
+            <ListItemButton
+              onClick={() => {
+                navigate("/all-fpo-details");
+              }}
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? "initial" : "center",
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : "auto",
+                  justifyContent: "center",
+                }}
+              >
+                <DashboardIcon
+                  style={{
+                    color: "#fff",
+                  }}
+                />
+              </ListItemIcon>
+              <ListItemText
+                primary={"All FPO Details"}
+                sx={{ opacity: open ? 1 : 0 }}
+              />
+            </ListItemButton>
+          </ListItem>
+          <ListItem
             key={"Create Post"}
             disablePadding
             sx={{ display: "block" }}

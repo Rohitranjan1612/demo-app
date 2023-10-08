@@ -60,3 +60,21 @@ export function addFpoDetails(data: any) {
       console.error({ error });
     });
 }
+
+export function fetchFpoDetails() {
+  return axios
+    .get("https://dev.bharatmandi.com//api/v1/farmer/fpo/get-fpo-details", {
+      headers: {
+        Accept: "*/*",
+        Authorization:
+          "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5ODQ0MjgyNTgzIiwiZXhwIjoxNjk3MTc4NTU3LCJpYXQiOjE2OTY1NzM3NTd9.b906J--ESCaAu_Rz4SQOonc91eF3EzduLVoAvhu4YQ2p8c6XcUuaBv8U_q_cs7OOwwOka4uASDY_QmIeRqv-cA",
+      },
+    })
+    .then((response) => {
+      console.log({ response });
+      return response;
+    })
+    .catch((error) => {
+      console.error({ error });
+    });
+}
